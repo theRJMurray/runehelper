@@ -5,7 +5,10 @@ const axios = require('axios').default;
 
 const port = 3000
 
-var charStats = hiscores.getPlayer({ name: "jZERKk", type: constants.playerTypes.normal }).then(console.log())
+var charStats = hiscores.getPlayer({ name: "jZERKk", type: constants.playerTypes.normal })
+.then((res) => {
+  console.log(res.attack)
+})
 
 app.get('/', (req, res) => res.send(charStats))
 
