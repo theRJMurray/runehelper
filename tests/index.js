@@ -17,11 +17,11 @@ describe("Highscores", () => {
         })
     })
 
-    it("should fail when not provided a username", (done) => {
+    it("should succeed when no username is provided", (done) => {
       chai.request(app)
         .get('/')
         .end((err, res) => {
-          res.should.have.status(404)
+          res.should.have.status(200)
           done()
         })
     })
