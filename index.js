@@ -1,15 +1,21 @@
 const { constants, hiscores } = require("osrs-api");
 const express = require('express')
 const app = express()
-const axios = require('axios').default;
 
 const port = 3000
 
-var charStats = hiscores.getPlayer({ name: "jZERKk", type: constants.playerTypes.normal })
-.then((res) => {
-  console.log(res.attack)
+
+app.get('/:username', function(req, res, error){
+  const username = req.params.username
+  hiscores.getPlayer({ name: username, type: constants.playerTypes.normal })
+  .then(function (playerData){
+    res.send(playerData)
+  })
+  .catch(function(error){
+    res.json("An error occurred")
+  })
 })
 
-app.get('/', (req, res) => res.send(charStats))
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+
+module.exports = app.listen(port)
