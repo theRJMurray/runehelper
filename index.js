@@ -1,11 +1,18 @@
 const { constants, hiscores } = require("osrs-api");
 const express = require('express')
+const path = require('path')
 const app = express()
-
 const port = 3000
 
 
-app.get('/:username', function(req, res, error){
+
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname + 'index.html'))
+});
+
+app.get('/search/:username', function(req, res, error){
   const username = req.params.username
   hiscores.getPlayer({ name: username, type: constants.playerTypes.normal })
   .then(function (playerData){
