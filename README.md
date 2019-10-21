@@ -7,7 +7,7 @@ Clone this repository `git clone git@github.com:theRJMurray/runehelper.git`
 `npm start`
 
 ## Searching User Stats
-In your browser go to localhost:3000/username where username is the  
+In your browser go to localhost:3000/search/username where username is the  
 username of the character you want to lookup
 
 ## Running tests
