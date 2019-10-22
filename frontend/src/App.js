@@ -1,5 +1,5 @@
 import React from 'react';
-import Stats from './components/stats';
+// import Stats from './components/stats';
 
 class App extends React.Component {
   constructor(props){
@@ -12,14 +12,18 @@ class App extends React.Component {
   componentDidMount(){
     fetch('/search/jZERKk')
     .then(res => res.json())
-    .then(userStats => this.setState({ userStats }))
+    .then(user => this.setState({ user }, () => console.log(user)))
   }
+
+
 
   render() {
     return (
       <div>
-        <p>Working</p>
-        <Stats stats={this.state.user}/>
+        <ul>
+          {this.state.user.map(user => <li>{ user.attack }</li>)}
+        </ul>
+
       </div>
     );
   }
