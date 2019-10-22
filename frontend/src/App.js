@@ -15,7 +15,7 @@ class App extends React.Component {
     .then(userStats => this.setState({ userStats }))
   }
 
-  render(){
+  render() {
     return (
       <div>
         <p>Working</p>
