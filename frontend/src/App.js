@@ -5,13 +5,14 @@ class App extends React.Component {
   constructor(props){
     super(props)
     this.state = {
-      user: []
+      user: [],
+      name: "r monjaro"
     }
   }
 
   componentDidMount(){
-    // let userId = '/search/' + this.state.name
-    fetch('/search/jZERKk')
+    let userId = '/search/' + this.state.name;
+    fetch(userId)
     .then(res => res.json())
     .then((data) =>
       this.setState({ user: data }))
