@@ -10,6 +10,7 @@ class App extends React.Component {
   }
 
   componentDidMount(){
+    // let userId = '/search/' + this.state.name
     fetch('/search/jZERKk')
     .then(res => res.json())
     .then((data) =>
