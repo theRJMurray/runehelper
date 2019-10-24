@@ -11,9 +11,5 @@ Clone this repository `git clone git@github.com:theRJMurray/runehelper.git`
 `npm install`  
 `npm test`
 
---
-
-
-## Searching User Stats - under construction
-In your browser go to localhost:3000/search/username where username is the  
-username of the character you want to lookup
+## Searching User Stats
+in App.js change this.state.name in the constructor
