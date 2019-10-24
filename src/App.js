@@ -12,18 +12,15 @@ class App extends React.Component {
   componentDidMount(){
     fetch('/search/jZERKk')
     .then(res => res.json())
-    .then(user => this.setState({ user }, () => console.log(user)))
+    .then((data) =>
+      this.setState({ user: data }))
   }
-
-
 
   render() {
     return (
       <div>
-        <ul>
-          {this.state.user.map(user => <li>{ user.attack }</li>)}
-        </ul>
 
+        {JSON.stringify(this.state.user)}
       </div>
     );
   }

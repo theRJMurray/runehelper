@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha tests/*.js --exit",
-    "start": "nodemon 3000"
+    "start": "nodemon index"
   },
   "author": "BeastAbility",
   "license": "ISC",
