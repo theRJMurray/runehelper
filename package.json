@@ -1,32 +1,28 @@
 {
-  "name": "frontend",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "react": "^16.10.2",
-    "react-dom": "^16.10.2",
-    "react-scripts": "3.2.0"
-  },
+  "name": "runehelper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "mocha tests/*.js --exit",
+    "start": "nodemon index",
+    "frontend-install": "cd frontend && npm install",
+    "frontend": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run start\" \"npm run frontend\""
   },
-  "proxy": "http://localhost:5000",
-  "eslintConfig": {
-    "extends": "react-app"
+  "author": "BeastAbility",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "concurrently": "^5.0.0",
+    "express": "^4.17.1",
+    "nodemon": "^1.19.3",
+    "osrs-api": "^0.1.2"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-http": "^4.0.0",
+    "mocha": "^5.1.1",
+    "nodemon": "^1.17.4"
   }
 }
