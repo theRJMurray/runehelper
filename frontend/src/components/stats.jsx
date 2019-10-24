@@ -5,7 +5,7 @@ class Stats extends React.Component {
     return (
       <div>
         <ul>
-          {this.props.stats.map(stats => <li key={ stats }>{ stats }</li>)}
+          {JSON.stringify(this.props.stats)}
         </ul>
       </div>
     );

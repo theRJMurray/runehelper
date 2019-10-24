@@ -1,14 +1,16 @@
 import React from 'react';
-// import Stats from './components/stats';
+import Stats from './components/stats';
 
 class App extends React.Component {
   constructor(props){
     super(props)
     this.state = {
       user: [],
-      name: "r monjaro"
+      name: "jzerkk"
     }
   }
+
+//{JSON.stringify(this.state.user)}
 
   componentDidMount(){
     let userId = '/search/' + this.state.name;
@@ -21,8 +23,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-
-        {JSON.stringify(this.state.user)}
+        <Stats stats={this.state.user} />
       </div>
     );
   }
