@@ -7,7 +7,7 @@ class App extends React.Component {
     super(props)
     this.state = {
       loading: true,
-      user: [],
+      user: undefined,
       name: null,
       placeholder: null,
     }
@@ -24,14 +24,6 @@ class App extends React.Component {
       name: this.state.placeholder
     })
     event.preventDefault()
-  }
-
-  componentDidMount(){
-    let userId = '/search/' + this.state.name;
-    fetch(userId)
-    .then(res => res.json())
-    .then((data) =>
-      this.setState({ user: data }))
   }
 
   componentDidUpdate(prevProps, prevState){
