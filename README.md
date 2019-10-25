@@ -7,9 +7,9 @@ Clone this repository `git clone git@github.com:theRJMurray/runehelper.git`
 `npm run frontend-install`  
 `npm run dev`
 
+## Searching User Stats
+Type the name you wish to search in the empty field and click "Search"
+
 ## Running tests
 `npm install`  
 `npm test`
-
-## Searching User Stats
-in App.js change this.state.name in the constructor
