@@ -2,10 +2,6 @@ import React from 'react';
 
 class Search extends React.Component {
 
-  componentDidUpdate(prevProps, prevState) {
-
-  }
-
   render() {
     return(
       <form onSubmit={this.props.handleSubmit}>
