@@ -11,6 +11,8 @@ This will install the node_modules necessary in the frontend without having to c
 `npm run dev`
 This will run a server on port 5000 for the backend with the API pulls, and a server on port 3000 for the frontend. A window should automatically popup on port 3000 in your browser after typing this command.
 
+"An error occurred" will display until you have completed a search.
+
 ## Searching User Stats
 Type the name you wish to search in the empty field and click "Search"
 
