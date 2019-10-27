@@ -2,15 +2,7 @@ const { constants, hiscores } = require("osrs-api");
 const express = require('express')
 const path = require('path')
 const app = express()
-const port = 3000
-
-
-
-app.use(express.static(path.join(__dirname, 'public')));
-
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname + 'index.html'))
-});
+const port = 5000
 
 app.get('/search/:username', function(req, res, error){
   const username = req.params.username
@@ -22,7 +14,5 @@ app.get('/search/:username', function(req, res, error){
     res.json("An error occurred")
   })
 })
-
-
 
 module.exports = app.listen(port)

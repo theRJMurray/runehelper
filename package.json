@@ -5,12 +5,16 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha tests/*.js --exit",
-    "start": "nodemon 3000"
+    "start": "nodemon index",
+    "frontend-install": "cd frontend && npm install",
+    "frontend": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run start\" \"npm run frontend\""
   },
   "author": "BeastAbility",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.19.0",
+    "concurrently": "^5.0.0",
     "express": "^4.17.1",
     "nodemon": "^1.19.3",
     "osrs-api": "^0.1.2"
