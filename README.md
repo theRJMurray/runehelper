@@ -2,10 +2,8 @@
 Helping people efficiently build their OSRS character
 
 ## Installing the App
-Clone this repository `git clone git@github.com:theRJMurray/runehelper.git`  
-`npm install`
-`npm run frontend-install`  
-This will install the node_modules necessary in the frontend without having to change directories back and forth.
+`git clone git@github.com:theRJMurray/runehelper.git`  - clone the repository
+`npm install` - install the dependencies
 
 ## Running the app
 `npm run dev`
