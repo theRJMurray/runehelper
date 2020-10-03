@@ -15,7 +15,7 @@ describe("Highscores", () => {
           res.body.should.be.a('object')
           done()
         })
-    })
+    }).timeout(10000)
 
     it("should fail when no username is provided", (done) => {
       chai.request(app)
@@ -34,7 +34,7 @@ describe("Highscores", () => {
           res.body.should.equal("An error occurred")
           done()
         })
-    })
+    }).timeout(10000)
 
 
 
